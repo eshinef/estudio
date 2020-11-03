@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         if (sosTimer == null) {
             sosTimer = new Timer();
             sosTask = new SOSTask();
-            sosTimer.schedule(sosTask, 500, 500);
+            sosTimer.schedule(sosTask, 500, 200);
         }
     }
 
@@ -103,13 +103,13 @@ public class MainActivity extends AppCompatActivity {
         void turnOn() {
             on = true;
             switch_btn.setText("On");
-            background_view.setBackgroundColor(getColor(R.color.white));
+            background_view.setBackgroundColor(getColor(R.color.red));
         }
 
         void turnOff() {
             on = false;
             switch_btn.setText("Off");
-            background_view.setBackgroundColor(getColor(R.color.black));
+            background_view.setBackgroundColor(getColor(R.color.yellow));
         }
 
         boolean isOn() {
